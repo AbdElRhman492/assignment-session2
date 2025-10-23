@@ -1,0 +1,32 @@
+Research Notes — HTML Entities
+
+What are HTML entities?
+- HTML entities are special codes that represent characters that either:
+  1) have a reserved meaning in HTML syntax, or
+  2) are not easily typed on a keyboard, or
+  3) belong to Unicode characters that might not render reliably across all contexts.
+- They start with an ampersand (&) and end with a semicolon (;), e.g., &amp;copy;.
+
+Why and when to use them:
+1) To escape reserved characters so they are shown as text instead of being parsed as HTML:
+   - &lt; for <
+   - &gt; for >
+   - &amp; for &
+2) To display typographic punctuation and symbols:
+   - &copy; (©), &reg; (®), &trade; (™)
+   - &quot; (") and &apos; (') for quotes in certain contexts
+   - &ndash; (–), &mdash; (—)
+3) To control whitespace:
+   - &nbsp; for a non‑breaking space (prevents a line break between words)
+4) To include non‑ASCII letters or special symbols if keyboard/input is limited:
+   - &euro; (€), &pound; (£), &yen; (¥)
+   - &alpha; (α), &beta; (β), &pi; (π)
+
+Common examples:
+- Show code safely: &lt;div class=&quot;box&quot;&gt;Hello &amp; welcome!&lt;/div&gt;
+- Keep words together: Rock&nbsp;&amp;&nbsp;Roll
+- Copyright footer: &copy; 2025 Your Name
+
+Notes:
+- Modern HTML supports UTF‑8, so many characters can be typed directly, but escaping reserved characters (&, <, >) is still required in text, attributes, and when embedding code.
+- For readability, use named entities (e.g., &copy;) when available; otherwise use numeric entities like &#169;.
